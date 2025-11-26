@@ -1,18 +1,54 @@
 {
-  "name": "koshel",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@koshel/vue-document-uploader",
+  "version": "1.0.0",
+  "description": "Vue 3 component for file upload with drag&drop support and document previews",
   "type": "module",
+  "main": "./dist/vue-document-uploader.umd.js",
+  "module": "./dist/vue-document-uploader.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-document-uploader.es.js",
+      "require": "./dist/vue-document-uploader.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "vue",
+    "vue3",
+    "upload",
+    "file-upload",
+    "drag-and-drop",
+    "document-uploader",
+    "component",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/vue-document-uploader.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:lib": "vite build --config vite.config.lib.js",
     "preview": "vite preview"
   },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
   "dependencies": {
-    "vue": "^3.5.24"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
-    "vite": "^7.2.4"
+    "typescript": "^5.9.3",
+    "vite": "^7.2.4",
+    "vite-plugin-dts": "^4.5.4"
   }
 }
